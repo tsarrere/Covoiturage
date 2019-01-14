@@ -1,0 +1,59 @@
+<form method="post" class="well">
+    <fieldsetclass="form-group">
+     <legend>Formulaire d'inscription</legend>
+     <div class="form-group row">
+       <label for="nom" class="col-sm-2 col-form-label col-form-label-sm">Nom</label>
+       <div class="col-sm-10">
+         <input  type="text" id="nom" class="form-control form-control-sm" name="nom" required/>
+       </div>
+     </div>
+     <div class="form-group row">
+       <label for="prenom" class="col-sm-2 col-form-label col-form-label-sm">Prénom</label>
+       <div class="col-sm-10">
+         <input type="text" id="prenom" class="form-control form-control-sm" name="prenom" required/>
+       </div>
+     </div>
+     <div class="form-group row">
+       <label for="email" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+       <div class="col-sm-10">
+         <input  type="text" id="email" class="form-control form-control-sm" name="email" required/>
+       </div>
+     </div>
+     <div class="form-group row">
+       <label for="password" class="col-sm-2 col-form-label col-form-label-sm">Mot de passe</label>
+       <div class="col-sm-10">
+         <input type="text" id="password" class="form-control form-control-sm" name="password" required/>
+       </div>
+     </div>
+     <div class="form-group row">
+       <label for="anneenaissance" class="col-sm-2 col-form-label col-form-label-sm">Année naissance</label>
+       <div class="col-sm-10">
+         <input type="number" min="1900" id="anneenaissance" class="form-control form-control-sm" name="anneenaissance" required/>
+       </div>
+     </div>
+     <div class="form-group row">
+        <label for="voiture" class="col-sm-2 col-form-label col-form-label-sm">Voiture</label>
+        <div class="col-sm-10">
+          <input type="text" id="voiture" class="form-control form-control-sm" name="voiture" required/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="telportable" class="col-sm-2 col-form-label col-form-label-sm">Téléphone portable</label>
+        <div class="col-sm-10">
+          <input type="number" id="telportable" class="form-control form-control-sm" name="telportable" required/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="sexe" class="col-sm-2 col-form-label col-form-label-sm">Sexe</label>
+        <div class="col-sm-10">
+          <select class="form-control" name="sexe" id="sexe">
+            <option value="M">Masculin</option>
+            <option value="F">Feminin</option>
+          </select>
+        </div>
+      </div>
+
+        <input id="validerInscription" type="submit" class="btn btn-primary" name="validerInscription" value="S'inscrire"/>
+        <input id="cancel" type="cancel" class="btn btn-outline-primary" name="annuler_profil" value="Annuler"/>
+    </fieldset>
+    </form>

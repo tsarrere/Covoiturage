@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-lg-4">
+        <table class="table table-bordered table-striped table-sm">
+            <tr><th>Départ</th><td>{{itis.lieudepart}}</td></tr>
+            <tr><th>Arrivée</th><td>{{itis.lieuarrivee}}</td></tr>
+            <tr><th>Date de départ</th><td>{{itis.datedepart}}</td></tr>
+            <tr><th>Heure de départ</th><td>{{itis.heuredepart}}</td></tr>
+            <tr><th>Tarif</th><td>{{itis.tarif}}</td></tr>
+            <tr><th>Nb de places</th><td>{{itis.nbplaces}}</td></tr>
+            <tr><th>Bagages autorisés</th><td>{% if itis.bagagesautorises == 1 %} Oui {% else %} Non {% endif %}</td></tr>
+            <tr><th>Détails</th><td>{{itis.details}}</td></tr>
+            <tr><th>Nom du chauffeur</th><td>{{iti.nom}} {{itis.prenom}}</td></tr>
+            <tr><th>Voiture</th><td>{{itis.voiture}}</td></tr>
+            <tr><th>Téléphone</th><td>{{itis.telportable}}</td></tr>
+            <tr><th>email</th><td>{{itis.email}}</td></tr>
+            <tr><th>Note</th><td>{% for i in 1..itis.note %}<img src="images/etoile.png">{% endfor %}</td></tr>
+        </table>
+    </div>
+    <div class="col-lg-8">
+        <iframe
+            width="600"
+            height="450"
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyA20rB7vhwG3Ty4_H_ZQmaz3GV9B-7YQkM
+            &origin={{itis.lieudepart}}+France
+            &destination={{itis.lieuarrivee}}+France">
+        </iframe>
+    </div>
+</div>

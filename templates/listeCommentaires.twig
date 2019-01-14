@@ -1,0 +1,16 @@
+{% if datas.length != 0 %}
+<table class="table table-bordered table-striped table-responsive-sm">
+<tr><th>Passager</th><th>Date</th><th>Commentaire</th><th>Note</th>
+</tr>	
+{% for data in datas %}
+    <tr>
+        <td>{{data.prenom}} {{data.nom}}</td>
+        <td>{{data.datecommentaire}}</td>
+        <td>{{data.textecommentaire}}</td>
+        <td>{% for i in 1..data.codequalite %}<img src="images/etoile.png">{% endfor %}</td>
+    </tr>
+{% endfor %}
+</table>
+{% else %}
+	<p>Aucune commentaire ne vous a été adressé pour le moment.</p>
+{% endif %}

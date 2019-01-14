@@ -1,0 +1,23 @@
+﻿{% if itis.length !=0 %}
+<table class="table table-bordered table-striped table-responsive-sm">
+<tr><th>Lieu de départ</th><th>Lieu d'arrivée</th><th>Horaire de départ</th>
+	<th><i class="fa fa-users"></i></th>
+	<th><i class="fa fa-eur"></i></th>
+	<th><i class="fa fa-briefcase"></i></th>
+	<th></th>
+</tr>	
+{% for iti in itis %}
+	<tr><td>{{ iti.lieudepart }}</td><td>{{ iti.lieuarrivee }}</td><td>{{ iti.datedepart }} {{ iti.heuredepart }}</td>
+	    <td>{{ iti.nbplaces - iti.nbplacesdispo }} / {{ iti.nbplaces }}</td><td>{{ iti.tarif }}</td><td>
+	{% if iti.bagagesautorises == 1 %} oui {% else %} non {% endif %}
+	</td><td>
+	<div class="btn-group">
+	<a href="#" class="btn btn-outline-success btn-sm details" id="{{ iti.iditi }}">Détails</a>
+	<a href="#" class="btn btn-outline-primary btn-sm reserv" id="{{ iti.iditi }}">Réserver</a>
+	</div>
+	</td></tr>
+{% endfor %}
+</table>
+{% else %}
+	<p>Aucun itinéraire ne correspond à vos critères</p>
+{% endif %}

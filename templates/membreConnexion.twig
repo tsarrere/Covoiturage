@@ -1,0 +1,29 @@
+<div class="col-sm-5">
+  <form id="connexion" class="well">
+	<div class="form-group">
+		<input type="text" id="login" class="form-control" size="10" aria-describedby="loginHelpBlock"/>
+		<small id="loginHelpBlock" class="form-text text-muted">Login</small>
+	</div>
+	<div class="form-group">
+		<input type="password" id="password" class="form-control" size="10" aria-describedby="passwordHelpBlock">
+		<small id="passwordHelpBlock" class="form-text text-muted">Mot de passe</small>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="form-control btn btn-primary">
+		<span class="glyphicon glyphicon-ok-sign"></span> Envoyer</button>
+	</div>
+	<div class="alert alert-block alert-danger" style="display:none">
+	  <h2>Erreur !</h2>
+	  Le login et le mot de passe sont obligatoires 
+	</div>
+  </form>
+</div>
+<script>
+	$("#connexion").on("submit", function() {
+	  if($("#login").val().length == 0 || $("#password").val().length == 0) {
+		$("connexion").addClass("has-error");
+		$("div.alert").show("slow").delay(3000).hide("slow");
+		return false;
+	  }
+	});
+</script>

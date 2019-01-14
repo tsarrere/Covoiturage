@@ -1,0 +1,60 @@
+<form method="post" class="well">
+        <fieldsetclass="form-group">
+         <legend>Nouvel itinéraire</legend>
+         <div class="form-group row">
+           <label for="lieudepart" class="col-sm-2 col-form-label col-form-label-sm">Départ</label>
+           <div class="col-sm-10">
+             <input  type="text" id="lieudepart" class="form-control form-control-sm" name="lieudepart" required placeholder="lieu de départ" />
+           </div>
+         </div>
+         <div class="form-group row">
+           <label for="lieuarrivee" class="col-sm-2 col-form-label col-form-label-sm">Arrivée</label>
+           <div class="col-sm-10">
+             <input type="text" id="lieuarrivee" class="form-control form-control-sm" name="lieuarrivee" required placeholder="lieu d'arrivée"/>
+           </div>
+         </div>
+         <div class="form-group row">
+           <label for="datedepart" class="col-sm-2 col-form-label col-form-label-sm">Date</label>
+           <div class="col-sm-10">
+             <input  type="text" id="datedepart" class="form-control form-control-sm" name="datedepart" required placeholder="date de départ jj/mm/aaaa"/>
+           </div>
+         </div>
+         <div class="form-group row">
+           <label for="heuredepart" class="col-sm-2 col-form-label col-form-label-sm">Heure</label>
+           <div class="col-sm-10">
+             <input type="time" id="heuredepart" class="form-control form-control-sm" name="heuredepart" required placeholder="heure de départ hh:mm"/>
+           </div>
+         </div>
+         <div class="form-group row">
+           <label for="tarif" class="col-sm-2 col-form-label col-form-label-sm">Tarif</label>
+           <div class="col-sm-10">
+             <input type="number" min="0" id="tarif" class="form-control form-control-sm" name="tarif" required placeholder="tarif"/>
+           </div>
+         </div>
+         <div class="form-group row">
+           <label for="nbplaces" class="col-sm-2 col-form-label col-form-label-sm">Nb de places</label>
+           <div class="col-sm-10">
+             <input type="number" min="0" id="nbplaces" class="form-control form-control-sm" name="nbplaces" required placeholder="nb de places"/>
+           </div>
+         </div>
+         <div class="form-group row">
+           <label for="bagagesautorises" class="col-sm-2 col-form-label col-form-label-sm">Bagages autorisés</label>
+            <div class="col-sm-10">
+              <label class="radio-inline"><input type="radio" name="bagagesautorises" id="BAoui" checked> Oui </label>
+              <label class="radio-inline"><input type="radio" name="bagagesautorises" id="BAnon"> Non </label>
+           </div>
+         </div>
+         <div class="form-group row">
+           <label for="details" class="col-sm-2 col-form-label col-form-label-sm">Détails</label>
+           <div class="col-sm-10">
+             <textarea id="details" class="form-control form-control-sm" name="details" placeholder="détails de l'itinéraire"/></textarea>
+           </div>
+         </div>
+         <!-- idmembre = 11 tantque pas de connexxion 
+         <input  type="hidden" id="idmembre" name="idmembre" value="11"/>  
+         -->
+         <!-- idmembre = celui de l'utilisateur connecté -->
+         <input  type="hidden" id="idmembre" name="idmembre" value="{{ idmembre }}>"/> 
+           <input id="formAjout" type="submit" class="btn btn-primary" name="valider_ajout" value="valider"/>
+        </fieldset>
+        </form>
